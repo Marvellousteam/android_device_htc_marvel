@@ -35,8 +35,14 @@
 
 extern "C" {
 #include <linux/android_pmem.h>
-#include <msm_camera.h>
+#include <media/msm_camera.h>
 }
+
+#define LOGD ALOGD
+#define LOGE ALOGE
+#define LOGI ALOGI
+#define LOGW ALOGW
+#define LOGV ALOGV
 
 struct str_map {
     const char *const desc;
@@ -71,15 +77,15 @@ struct board_property{
 #define CAMERA_MIN_CONTRAST 0
 #define CAMERA_MAX_CONTRAST 4
 #define CAMERA_MIN_SHARPNESS 0
-#define CAMERA_MIN_EXPOSURE_COMPENSATION -2
+#define CAMERA_MIN_EXPOSURE_COMPENSATION 1
 #define CAMERA_MAX_SHARPNESS 4
 #define CAMERA_MIN_SATURATION 0
 #define CAMERA_MAX_SATURATION 4
-#define CAMERA_MAX_EXPOSURE_COMPENSATION 2
+#define CAMERA_MAX_EXPOSURE_COMPENSATION 5
 #define CAMERA_DEF_SHARPNESS 2
 #define CAMERA_DEF_CONTRAST 2
 #define CAMERA_DEF_SATURATION 2
-#define CAMERA_DEF_EXPOSURE_COMPENSATION "0"
+#define CAMERA_DEF_EXPOSURE_COMPENSATION "2"
 #define CAMERA_EXPOSURE_COMPENSATION_STEP 1
 
 #define CEILING16(x) (x&0xfffffff0)
@@ -198,7 +204,7 @@ struct fifo_node {
 void enqueue(struct fifo_queue *queue, struct fifo_node *node) {
 	struct fifo_node *cur_node=queue->node;
 	int i;
-	ALOGE("enqueue:%p(%d)\n", node, queue->num_of_frames);
+	LOGE("enqueue:%p(%d)\n", node, queue->num_of_frames);
 	node->next=NULL;
 	if(queue->num_of_frames==0) {
 		queue->num_of_frames++;
@@ -219,7 +225,7 @@ struct fifo_node *dequeue(struct fifo_queue *queue) {
 	if(queue->num_of_frames==0)
 		return NULL;
 	struct fifo_node *node=queue->node;
-	ALOGE("dequeue:%p(%d)\n", node, queue->num_of_frames);
+	LOGE("dequeue:%p(%d)\n", node, queue->num_of_frames);
 	queue->num_of_frames--;
 	queue->front=!!queue->num_of_frames;
 	queue->node=queue->node->next;
