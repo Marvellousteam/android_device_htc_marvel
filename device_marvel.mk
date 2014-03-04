@@ -35,11 +35,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-### Mount vold
-PRODUCT_COPY_FILES += \
-    device/htc/marvel/vold.fstab:system/etc/vold.fstab
-
-
 ### Keylayouts
 PRODUCT_COPY_FILES += \
     device/htc/marvel/key/marvel-keypad.kl:system/usr/keylayout/marvel-keypad.kl \
