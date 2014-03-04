@@ -75,4 +75,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product-if-exists, vendor/htc/marvel/marvel-vendor.mk)
 
 # Odexing
-DISABLE_DEXPREOPT := false
+#DISABLE_DEXPREOPT := false
