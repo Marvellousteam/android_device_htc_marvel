@@ -31,9 +31,6 @@ TARGET_CPU_ABI := armeabi-v6l
 BOARD_VENDOR_COMPASS_HARDWARE := akm8975
 
 ### Kernel
-TARGET_KERNEL_SOURCE := kernel/htc/msm7227
-TARGET_KERNEL_CONFIG := marvel_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12c00000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -55,8 +52,8 @@ DEVICE_RESOLUTION := 320x480
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_NO_REAL_SDCARD := true
 # set this to device/htc/marvel/recovery/twrp.fstab for TWRP
-TARGET_RECOVERY_FSTAB := device/htc/marvel/fstab.marvel
-RECOVERY_FSTAB_VERSION := 2
+#TARGET_RECOVERY_FSTAB := device/htc/marvel/fstab.marvel
+#RECOVERY_FSTAB_VERSION := 2
 
 # Odexing
 #WITH_DEXPREOPT := true
