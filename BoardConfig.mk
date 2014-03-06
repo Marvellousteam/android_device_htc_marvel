@@ -52,8 +52,8 @@ DEVICE_RESOLUTION := 320x480
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_NO_REAL_SDCARD := true
 # set this to device/htc/marvel/recovery/twrp.fstab for TWRP
-#TARGET_RECOVERY_FSTAB := device/htc/marvel/fstab.marvel
-#RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/htc/marvel/fstab.marvel
+RECOVERY_FSTAB_VERSION := 2
 
 # Odexing
 #WITH_DEXPREOPT := true
