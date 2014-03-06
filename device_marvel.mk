@@ -49,8 +49,9 @@ PRODUCT_COPY_FILES += \
 ### Ramdisk
 PRODUCT_COPY_FILES += \
     device/htc/marvel/init.marvel.rc:root/init.marvel.rc \
-    device/htc/marvel/ueventd.marvel.rc:root/ueventd.marvel.rc \
-	device/htc/marvel/fstab.marvel:root/fstab.marvel
+    device/htc/msm7x27-common/ramdisk/ueventd.marvel.rc:root/ueventd.marvel.rc \
+    device/htc/msm7x27-common/ramdisk/init.msm7x27.usb.rc:root/init.msm7x27.usb.rc \
+    device/htc/msm7x27-common/ramdisk/fstab.qcom:root/fstab.qcom
 
 # For emmc phone storage
 PRODUCT_PROPERTY_OVERRIDES += \
