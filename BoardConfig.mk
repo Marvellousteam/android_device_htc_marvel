@@ -31,7 +31,7 @@ TARGET_CPU_ABI := armeabi-v6l
 BOARD_VENDOR_COMPASS_HARDWARE := akm8975
 
 ### Kernel
-BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12c00000
 BOARD_KERNEL_PAGESIZE := 2048
 
