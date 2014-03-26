@@ -41,12 +41,6 @@ PRODUCT_COPY_FILES += \
     device/htc/marvel/key/marvel-keypad.kcm.bin:system/usr/keychars/marvel-keypad.kcm.bin \
     device/htc/marvel/key/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/marvel/key/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl
-    
-### Ramdisk
-PRODUCT_PACKAGES += \
-	fstab.marvel \
-	init.marvel.rc \
-	ueventd.marvel.rc
 
 ## Temp fix for Akmd
 PRODUCT_COPY_FILES += \
