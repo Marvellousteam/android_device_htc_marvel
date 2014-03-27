@@ -43,7 +43,11 @@ PRODUCT_COPY_FILES += \
     device/htc/marvel/key/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl
     
 ### Ramdisk
-    $(call find-copy-subdir-files,*,device/htc/marvel/rootdir/etc,root)
+PRODUCT_COPY_FILES += \
+    device/htc/marvel/rootdir/etc/init.marvel.rc:root/init.marvel.rc \
+    device/htc/marvel/rootdir/etc/ueventd.marvel.rc:root/ueventd.marvel.rc \
+    device/htc/msm7x27-common/init.msm7x27.usb.rc:root/init.msm7x27.usb.rc \
+    device/htc/marvel/rootdir/etc/fstab.marvel:root/fstab.marvel
 
 ## Temp fix for Akmd
 PRODUCT_COPY_FILES += \
