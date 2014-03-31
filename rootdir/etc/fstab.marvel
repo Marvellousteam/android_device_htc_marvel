@@ -3,7 +3,7 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 #<src>                                      <mnt_point>        <type>  <mnt_flags and options>                 <fs_mgr_flags>
-system                                      /system            yaffs2  ro,barrier=1                            length=199229440,wait
+/dev/block/mtdblock3                        /system            yaffs2  ro,barrier=1                            length=199229440,wait
 boot                                        /boot              mtd     defaults                                length=4456448
 cache                                       /cache             yaffs2  nosuid,nodev,barrier=1                  length=67108864,wait
 userdata                                    /data              yaffs2  nosuid,nodev,noauto_da_alloc,barrier=1  length=209190912,wait
