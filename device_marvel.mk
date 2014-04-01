@@ -46,7 +46,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/marvel/rootdir/etc/init.marvel.rc:root/init.marvel.rc \
     device/htc/marvel/rootdir/etc/ueventd.marvel.rc:root/ueventd.marvel.rc \
-    device/htc/msm7x27-common/rootdir/etc/init.msm7x27.usb.rc:root/init.msm7x27.usb.rc \
     device/htc/marvel/rootdir/etc/fstab.marvel:root/fstab.marvel
 
 ## Temp fix for Akmd
