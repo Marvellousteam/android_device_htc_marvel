@@ -1,8 +1,11 @@
-# Include GSM stuff
-$(call inherit-product, vendor/cm/config/gsm.mk)
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
-# Inherit mini configuration
-$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from omni custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/marvel/marvel.mk)
@@ -13,7 +16,7 @@ TARGET_SCREEN_WIDTH := 320
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := marvel
-PRODUCT_NAME := cm_marvel
+PRODUCT_NAME := omni_marvel
 PRODUCT_BRAND := htc_europe
 PRODUCT_MODEL := Wildfire S A510e
 PRODUCT_MANUFACTURER := HTC

@@ -60,7 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     Email2 \
     Exchange2 \
-    Torch
+    OmniTorch
 
 # Add device specific modules ## Build for now from msm7x27-common
 #PRODUCT_PACKAGES += \
