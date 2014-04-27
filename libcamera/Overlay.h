@@ -29,7 +29,7 @@
 #include <ui/PixelFormat.h>
 #include "IOverlay.h"
 
-#include "overlay2.h"
+#include "overlay.h"
 
 namespace android {
 
